@@ -3,7 +3,7 @@ import json
 import numpy as np
 from sklearn.metrics import f1_score, accuracy_score
 import math
-
+import pandas as pd
 from agents.user_config import UserAgent
 
 
@@ -44,11 +44,7 @@ if __name__ == "__main__":
     print("(1.1) Prediction F1 Score:", f1)
     print("(1.2) Prediction Accuracy:", acc)
 
-    # data_path_2 = 'task2_more_eval_data.json'
-    # test_data_2 = load_data(data_path_2)
-    # responses_2 = classify_links(agent, test_data_2, BATCH_SIZE)
-    # f12, acc2 = evaluate(responses_2, test_data_2)
-
-    # print("(2.1) Prediction F1 Score:", f12)
-    # print("(2.2) Prediction Accuracy:", acc2)
-
+    df = pd.DataFrame(test_data)
+    df['prediction'] = responses
+    model_name = agent.__class__.__name__
+    df.to_csv(f'dimiss_items/data/eval/task2_data_subset_{model_name}_predictions.csv', index=False)

@@ -13,4 +13,4 @@ from agents.deberta_nlu_deberta_full import DebertaNluFullDeberta
 from agents.deberta_nlu_head_deberta_tail_agent import DebertaNluHeadDebertaNluTailAgent
 from agents.comfact_relation_agnostic_baseline_agent import ComfactRelationAgnosticBaselineClassifierAgent
 
-UserAgent = ComfactRelationAgnosticBaselineClassifierAgent
+UserAgent = DebertaNluRelationDeberta
