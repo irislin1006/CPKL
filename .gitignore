@@ -3,3 +3,5 @@ __pycache__
 dimiss_items
 wandb
 tmp/test
+
+cache
